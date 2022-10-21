@@ -8,7 +8,7 @@ class User < ApplicationRecord
     
     after_initialize :init_post_count
 
-    has_many :posts, foreign_key: 'author_id'
+    has_many :posts, foreign_key: 'author_id', counter_cache: :posts_counter 
     has_many :comments, foreign_key: 'author_id'
     has_many :likes, foreign_key: 'author_id'
 
