@@ -74,3 +74,7 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+
+# linter
+gem 'rubocop', '>= 1.0', '< 2.0'
