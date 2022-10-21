@@ -16,9 +16,9 @@ class Post < ApplicationRecord
   after_initialize :init_comment_count
 
   # A method that updates the posts counter for a user.
-  def update_user_posts_counter
-    author.update(posts_counter: author.posts.length)
-  end
+  # def update_user_posts_counter
+  #   self.update(posts_counter: self.posts.length())
+  # end
 
   # A method which returns the 5 most recent comments for a given post.
   def get_5_recent_comments
