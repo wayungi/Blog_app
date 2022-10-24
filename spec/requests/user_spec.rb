@@ -1,12 +1,5 @@
 require 'rails_helper'
 
-
-# If response status was correct.
-# If a correct template was rendered.
-# If the response body includes correct placeholder text.
-
-
-
 RSpec.describe 'Users', type: :request do
     describe 'GET user/users' do
       # tests correct response status
@@ -48,8 +41,7 @@ RSpec.describe 'Users', type: :request do
       end
     end
 
-
-    describe 'GET user/user_posts' do
+    describe 'GET user/:id/posts' do
       # tests correct response status
       it 'returns http success' do
         get '/user/10/posts'
@@ -66,6 +58,26 @@ RSpec.describe 'Users', type: :request do
       it 'returns Show a single user with id' do
         get '/user/10/posts'
         expect(response.body).to include 'Show all posts of a single user'
+      end
+    end
+
+    describe 'GET user/:user_id/posts/:id' do
+      # tests correct response status
+      it 'returns http success' do
+        get '/user/1/posts/10'
+        expect(response).to have_http_status(:success)
+      end
+
+      # Tests a correct template was rendered.
+      it 'returns the user_posts template' do
+        get '/user/1/posts/5'
+        expect(response).to render_template('user_post')
+      end
+
+      # Test if response body includes correct placeholder text.
+      it 'returns Show a single user with id' do
+        get '/user/2/posts/2'
+        expect(response.body).to include 'Show a single post by a user here'
       end
     end
   end
