@@ -4,4 +4,7 @@ class UserController < ApplicationController
 
   def user
   end
+
+  def user_posts
+  end
 end
