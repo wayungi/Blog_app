@@ -8,14 +8,16 @@
 
 <div class="posts">
 <% @posts.each do |post|%>
-    <div class="post">
-        <%= post.title %>
-        <%= post.text %>
-        <span>Commnets counter</span>
-        <%= post.comments_counter%>
-        <span>Likes counter</span>
-        <%= post.likes_counter%>
-    </div>
+    <%= link_to "/user/#{@user.id}/posts/#{post.id}" do %>
+        <div class="post">
+            <%= post.title %>
+            <%= post.text %>
+            <span>Commnets counter</span>
+            <%= post.comments_counter%>
+            <span>Likes counter</span>
+            <%= post.likes_counter%>
+        </div>
+    <% end %>
     <div class="comments">
         <% post.comments.each do |comment| %>
             <div class="comment">
