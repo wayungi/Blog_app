@@ -1,4 +1,29 @@
 <p>Show all posts of a single user</p>
 
+<div class="user">
+    <%= @user.photo %>
+    <%= @user.name %>
+    <%= @user.posts_counter %>
+</div>
 
+<div class="posts">
+<% @posts.each do |post|%>
+    <div class="post">
+        <%= post.title %>
+        <%= post.text %>
+        <span>Commnets counter</span>
+        <%= post.comments_counter%>
+        <span>Likes counter</span>
+        <%= post.likes_counter%>
+    </div>
+    <div class="comments">
+        <% post.comments.each do |comment| %>
+            <div class="comment">
+                <%= comment.text%>
+            </div>
+        <% end %>
+    </div>
+    <br />
+    <% end %>
+</div>
 

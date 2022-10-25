@@ -12,12 +12,9 @@ class UserController < ApplicationController
   end
 
   def user_posts
-    # pass user id param
-    @user = User.find_by(id: 1)
+    @id = params[:id]
+    @user = User.find_by(id: @id)
     @posts = @user.all_posts
-    
-   
-  
   end
 
   def user_post; end
