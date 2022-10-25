@@ -6,8 +6,8 @@ class UserController < ApplicationController
 
   def user
     # pass id as param
-    @user = User.find_by(id: 1)
-    @posts = Post.all
+    @user = User.find_by(id: 2)
+    @posts = @user.three_recent_posts
 
   end
 
