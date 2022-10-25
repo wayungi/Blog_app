@@ -1,2 +1,10 @@
 <h1>Users</h1>
 <p>List of users goes here</p>
+<div class="users">
+    <% @users.each do |user|%>
+        <%= user.photo%>
+        <%= user.name %>
+        <%= user.bio%>
+        <br />
+    <% end %>
+</div>
