@@ -1,10 +1,17 @@
 <h1>Users</h1>
-<p>List of users goes here</p>
 <div class="users">
     <% @users.each do |user|%>
-        <%= user.photo%>
-        <%= user.name %>
-        <%= user.bio%>
+        <%= link_to "/user/#{user.id}/posts" do %>
+            <div class="user-icon">
+                <%= user.photo%>
+            </div>
+            <div class="user-info">
+                <%= user.name %>
+                <%= user.id%>
+                <span>Number of posts</span>
+                <%= user.posts_counter%>
+            </div>
+        <% end %>
         <br />
     <% end %>
 </div>

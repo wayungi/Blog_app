@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  # temporarly root
+  root 'user#users'
+
   # List all users
   get 'user/users'
 
