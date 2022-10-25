@@ -4,7 +4,12 @@ class UserController < ApplicationController
     @users = User.all
   end
 
-  def user; end
+  def user
+    # pass id as param
+    @user = User.find_by(id: 1)
+    @posts = Post.all
+
+  end
 
   def user_posts; end
 

@@ -1,1 +1,21 @@
 <p>Show a single user with id</p>
+
+<div class="users">
+    <%= @user.photo%>
+    <%= @user.name %>
+    <%= @user.bio%>
+</div>
+
+<div class="posts">
+ <% @posts.each do |post|%>
+        <div class="post">
+        <%= post.title %><br/>
+        <%= post.text %><br />
+        <span>comments</span>
+        <%= post.comments_counter%>
+        <span>Likes</span>
+        <%= post.likes_counter%>
+        </div>
+        <br />
+    <% end %>
+</div>
