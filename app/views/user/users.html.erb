@@ -1,7 +1,7 @@
 <h1>Users</h1>
 <div class="users">
     <% @users.each do |user|%>
-        <%= link_to "/user/#{user.id}/posts" do %>
+        <%= link_to "/user/#{user.id}" do %>
             <div class="user-icon">
                 <%= user.photo%>
             </div>
