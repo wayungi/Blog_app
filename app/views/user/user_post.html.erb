@@ -1,1 +1,30 @@
 <p>Show a single post by a user here</p>
+
+<div class="post_detail">
+    <div class="post_header">
+        <%= @post.title %> by
+        <%= @user.name%>
+    </div>
+
+    <div class="post_stats">
+        <span>Comments:</span>
+        <%= @post.comments_counter%>
+        <span>Likes</span>
+        <%= @post.likes_counter %>
+    </div>
+
+    <div class="post_body">
+        <%= @post.text %>
+    </div>
+
+    <div class="comments_body">
+        <% @post.comments.each do |comment| %>
+            <%= User.find_by(id: comment.author_id).name %> :
+            <%= comment.text%> <br />
+        <% end %>
+    </div>
+
+
+
+
+</div>

@@ -21,11 +21,16 @@
     <div class="comments">
         <% post.comments.each do |comment| %>
             <div class="comment">
-                <%= comment.text%>
+                <%= User.find_by(id: comment.author_id).name %> :
+                <%= comment.text%><br />
             </div>
         <% end %>
     </div>
     <br />
     <% end %>
 </div>
+
+
+  <%= link_to "Paginate", '' %>
+
 
