@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to 
+      redirect_to
     else
       render :new
     end

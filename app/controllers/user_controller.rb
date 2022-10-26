@@ -9,7 +9,6 @@ class UserController < ApplicationController
     @id = params[:id]
     @user = User.find_by(id: @id)
     @posts = @user.three_recent_posts
-
   end
 
   # show all of the posts of a user in summary with thier comments
@@ -25,7 +24,7 @@ class UserController < ApplicationController
     @post_id = params[:id]
 
     @user = User.find_by(id: @user_id)
-    @post = @user.posts.find_by(id:@post_id)
+    @post = @user.posts.find_by(id: @post_id)
     @comments = @post.comments
   end
 end
