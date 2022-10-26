@@ -11,6 +11,10 @@ class User < ApplicationRecord
   has_many :comments, foreign_key: 'author_id'
   has_many :likes, foreign_key: 'author_id'
 
+  def current_user
+    @user = User.first
+  end
+
   def all_posts
     posts.all
   end
