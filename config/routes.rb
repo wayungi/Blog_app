@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'posts/new'
   # temporarly root
   root 'user#users'
 
@@ -13,6 +14,9 @@ Rails.application.routes.draw do
 
   # Show a single post
   get 'user/:user_id/posts/:id', to:'user#user_post'
+
+  #==================  posts routes=======
+  get 'posts/new', to: 'posts#new'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
