@@ -1,0 +1,20 @@
+<h1>New Comment</h1>
+
+<%= form_with model: @comment do |form| %>
+
+    <div>
+        <%= form.label :text %>
+        <%= form.text_field :text %>
+    </div>
+
+    <div>
+        <%= @current_user.id %>
+        <%= form.hidden_field :author_id, value: @current_user.id %>
+    </div>
+
+    <div>
+        <%= @post_id %>
+        <%= form.hidden_field :post_id, value: @post_id %>
+    </div>
+
+<% end %>

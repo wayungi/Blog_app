@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  get 'comments/new'
   resources :posts 
+  resources :comments
   get 'posts/new'
   # temporarly root
   root 'user#users'
