@@ -2,8 +2,8 @@
 <div class="users">
     <% @users.each do |user|%>
         <%= link_to "/user/#{user.id}" do %>
-            <div class="user-icon">
-                <%= user.photo%>
+            <div class="user_avatar">
+                <%= image_tag "#{user.photo}", class:"avatar" %>
             </div>
             <div class="user-info">
                 <%= user.name %>

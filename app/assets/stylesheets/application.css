@@ -27,3 +27,13 @@
     text-decoration: none;
     font-size: 12px;
  }
+
+ .user_avatar {
+    outline:1px solid black;
+    width:200px;
+    height:200px;
+ }
+
+ .avatar {
+    width:100%;
+ }
