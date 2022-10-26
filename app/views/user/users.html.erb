@@ -1,17 +1,23 @@
-<h1>Users</h1>
-<div class="users">
-    <% @users.each do |user|%>
-        <%= link_to "/user/#{user.id}" do %>
-            <div class="user_avatar">
-                <%= image_tag "#{user.photo}", class:"avatar" %>
+<div class="wrapper">
+    <div class="users">
+        <% @users.each do |user|%>
+            <%= link_to "/user/#{user.id}" do %>
+            <div class="user_group">
+                <div class="user_avatar">
+                    <%= image_tag "#{user.photo}", class:"avatar" %>
+                </div>
+                <div class="user_info">
+                    <div class="user_name">
+                        <%= user.name %>
+                    </div>
+                    <div class="posts_counter">
+                        <span class="spacer">Number of posts: </span>
+                        <%= user.posts_counter %>
+                    </div>
+                </div>
             </div>
-            <div class="user-info">
-                <%= user.name %>
-                <%= user.id%>
-                <span>Number of posts</span>
-                <%= user.posts_counter%>
-            </div>
+            <% end %>
+            <br />
         <% end %>
-        <br />
-    <% end %>
+    </div>
 </div>

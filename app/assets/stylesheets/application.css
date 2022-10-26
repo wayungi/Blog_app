@@ -1,23 +1,7 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
-
  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,500;0,700;1,100&display=swap');
  /*     font-family: 'Montserrat', sans-serif; */
 
+ /* normalize */
  *{
     margin: 0;
     padding: 0;
@@ -28,12 +12,68 @@
     font-size: 12px;
  }
 
+ .wrapper {
+    margin-top: 10px;
+ }
+
+ /* set flex display */
+.posts_counter, .user_name, .user_group, .user_info {
+    display:flex;
+ }
+
+ /* groups .user_avatar & .user_info divs */
+ .user_group {
+    justify-content: center;
+    column-gap:2%;
+ }
+
+ /* user-icon div */
  .user_avatar {
-    outline:1px solid black;
-    width:200px;
-    height:200px;
+    width:150px;
  }
 
  .avatar {
     width:100%;
  }
+
+ /* user information on users page */
+ .user_info {
+    justify-content: space-between;
+    width: 60%;
+    background-color: #d9eeae;
+    padding: 5px 10px;
+ }
+
+ /* user name styles */
+ .user_name {
+    font-family: 'Montserrat', sans-serif;
+    font-size:36px;
+    font-weight: 700;
+    align-items:center;
+ }
+
+ .posts_counter {
+    align-items:flex-end;
+ }
+
+ /* add padding between Number of posts & posts count value */
+ .spacer{
+    padding-right:5px;
+ }
+
+
+
+ @media only screen and (max-width: 600px) {
+
+    .user_info {
+        flex-direction: column;
+        justify-content:flex-start;
+        row-gap:10px;
+     }
+
+
+    
+
+ }
+
+
