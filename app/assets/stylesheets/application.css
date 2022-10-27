@@ -16,8 +16,13 @@
     margin-top: 10px;
  }
 
+ .users_list {
+    font-size: 34px;
+    text-align: center;
+ }
+
  /* set flex display */
-.posts_counter, .user_name, .user_group, .user_info {
+.posts_counter, .user_name, .user_group, .user_info, .bio, .posts, .post, .counters {
     display:flex;
  }
 
@@ -47,7 +52,7 @@
  /* user name styles */
  .user_name {
     font-family: 'Montserrat', sans-serif;
-    font-size:36px;
+    font-size:25px;
     font-weight: 700;
     align-items:center;
  }
@@ -61,6 +66,55 @@
     padding-right:5px;
  }
 
+ /* bio div */
+ .bio {
+    margin:15px 0;
+    justify-content: center;
+ }
+
+ .bio div {
+    width:calc(63.5% + 150px);
+    font-weight: 400;
+    font-size: 15px;
+    color:blue;
+ }
+
+ /* posts  */
+
+ .posts {
+    flex-direction:column;
+    align-items:center;
+ }
+
+ .post {
+    width:calc(63.5% + 150px);
+    flex-direction:column;
+    margin-bottom:15px;
+ }
+
+ .post_title {
+    font-size:24px;
+    font-size: 400;
+    color:blueviolet;
+ }
+
+ .post_body {
+    font-size:18px;
+    margin-top: 2px;
+ }
+
+ .counters {
+    justify-content: flex-end;
+ }
+
+ .counters span{
+    color:blue;
+ }
+
+ .comments_counter {
+    margin-right:15px;
+ }
+
 
 
  @media only screen and (max-width: 600px) {
@@ -69,6 +123,11 @@
         flex-direction: column;
         justify-content:flex-start;
         row-gap:10px;
+     }
+
+     .bio div {
+        width:100%;
+        padding: 1%;
      }
 
 
