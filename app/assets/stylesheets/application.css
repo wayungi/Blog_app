@@ -22,7 +22,7 @@
  }
 
  /* set flex display */
-.posts_counter, .user_name, .user_group, .user_info, .bio, .posts, .post, .counters {
+.posts_counter, .user_name, .user_group, .user_info, .bio, .posts, .post, .counters, .all_posts {
     display:flex;
  }
 
@@ -113,6 +113,16 @@
 
  .comments_counter {
     margin-right:15px;
+ }
+
+ .all_posts {
+    margin-top:20px;
+    justify-content: center;
+ }
+
+ .view_all_posts{
+    padding:10px 15px;
+    outline:1px solid black;
  }
 
 
