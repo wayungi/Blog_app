@@ -1,23 +1,48 @@
-<p>Show all posts of a single user</p>
+<div class="wrapper">
+<h1 class="users_list"><%= "#{@user.name}'s posts" %></h1>
 
-<div class="user">
-    <%= @user.photo %>
-    <%= @user.name %>
-    <%= @user.posts_counter %>
+
+<div class="user_group">
+    <div class="user_avatar">
+        <%= image_tag "#{@user.photo}", class:"avatar" %>
+    </div>
+    <div class="user_info">
+        <div class="user_name">
+            <%= @user.name %>
+        </div>
+        <div class="posts_counter">
+            <span class="spacer">Number of posts: </span>
+            <%= @user.posts_counter %>
+        </div>
+    </div>
 </div>
 
 <div class="posts">
-<% @posts.each do |post|%>
-    <%= link_to "/user/#{@user.id}/posts/#{post.id}" do %>
+    <% @posts.each do |post|%>
         <div class="post">
-            <%= post.title %>
-            <%= post.text %>
-            <span>Commnets counter</span>
-            <%= post.comments_counter%>
-            <span>Likes counter</span>
-            <%= post.likes_counter%>
+        <%= link_to "/user/#{@user.id}/posts/#{post.id}" do %>
+            <div class="post">
+                <div class="post_title">
+                    <%= post.title %><br/>
+                </div>
+                <div class="post_body">
+                    <%= post.text %><br />
+                </div>
+                <div class="counters">
+                        <div class="comments_counter">
+                            <span>Commnets: </span>
+                            <%= post.comments_counter%>
+                        </div>
+                        <div class="likes_counter">
+                            <span>Likes counter</span>
+                            <%= post.likes_counter%>
+                        </div>
+                </div>
+            </div>
         </div>
     <% end %>
+
+
     <div class="comments">
         <% post.comments.each do |comment| %>
             <div class="comment">
@@ -26,12 +51,13 @@
             </div>
         <% end %>
     </div>
-    <br />
     <% end %>
 </div>
 
 
   <%= link_to "Paginate", '' %>
+<div class="wrapper">
+
 
 
 

@@ -14,7 +14,6 @@
 
  .wrapper {
     margin-top: 10px;
-    outline:1px solid black;
  }
 
  .users_list {
@@ -88,7 +87,7 @@
     align-items:center;
  }
 
- .post, .comments {
+ .post {
     width:calc(63.5% + 150px);
     flex-direction:column;
     margin-bottom:15px;
