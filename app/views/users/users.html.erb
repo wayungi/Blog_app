@@ -2,7 +2,7 @@
     <h1 class="users_list">users</h1>
     <div class="users">
         <% @users.each do |user|%>
-            <%= link_to "/user/#{user.id}" do %>
+            <%= link_to "/users/#{user.id}" do %>
             <div class="user_group">
                 <div class="user_avatar">
                     <%= image_tag "#{user.photo}", class:"avatar" %>

@@ -20,7 +20,7 @@
 <div class="posts">
     <% @posts.each do |post|%>
         <div class="post">
-        <%= link_to "/user/#{@user.id}/posts/#{post.id}" do %>
+        <%= link_to "/users/#{@user.id}/posts/#{post.id}" do %>
             <div class="post">
                 <div class="post_title">
                     <%= post.title %><br/>
