@@ -14,7 +14,7 @@
 
  .wrapper {
     margin-top: 10px;
-    outline:1px solid black;
+    /* outline:1px solid black; */
  }
 
  .users_list {
@@ -94,7 +94,7 @@
     margin-bottom:15px;
  }
 
- .post_title {
+ .post_title, .post_title_name {
     font-size:24px;
     font-size: 400;
     color:blueviolet;
@@ -127,6 +127,36 @@
     outline:1px solid black;
  }
 
+ /*===== a post's  deatils */
+
+ .post_detail {
+   display:flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .post_particular{
+   /* outline:1px solid green; */
+   width:80%;
+ }
+
+ /* align the heading and post counters on the same line */
+ .header_line {
+   display:flex;
+   justify-content: space-between;
+ }
+
+ .post_stats {
+   font-size:20px;
+   font-size: 200;
+ }
+
+ .comments_body{
+   display:flex;
+   flex-direction:column;
+   width:80%;
+   margin-top:15px;
+ }
 
 
  @media only screen and (max-width: 600px) {
