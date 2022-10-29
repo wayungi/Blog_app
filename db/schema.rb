@@ -29,6 +29,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_21_161650) do
     t.bigint "post_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["author_id", "post_id"], name: "index_likes_on_author_id_and_post_id", unique: true
     t.index ["author_id"], name: "index_likes_on_author_id"
     t.index ["post_id"], name: "index_likes_on_post_id"
   end
