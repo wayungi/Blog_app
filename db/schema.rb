@@ -31,7 +31,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_21_161650) do
     t.datetime "updated_at", null: false
     t.index ["author_id"], name: "index_likes_on_author_id"
     t.index ["post_id"], name: "index_likes_on_post_id"
-    add_index :likes[:author_id, :post_id] unique: true
   end
 
   create_table "posts", force: :cascade do |t|
