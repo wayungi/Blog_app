@@ -1,10 +1,9 @@
 class LikesController < ApplicationController
+  # handle creating new like
+  def create
+    @like = @user.likes.new
+  end
 
-    # handle creating new like
-    def create 
-    end
-
-    # handles unliking
-    def destroy 
-    end
+  # handles unliking
+  def destroy; end
 end
