@@ -47,7 +47,7 @@
         <% post.comments.order(:created_at).first(5).each do |comment| %>
             <div class="comment">
                 <%= User.find_by(id: comment.author_id).name %> :
-                <%= comment.text%><br />
+                <%= comment.text %><br />
             </div>
         <% end %>
     </div>
