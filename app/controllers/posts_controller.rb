@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-
   def index
     @posts = posts.comments.order(:created_at).first(5)
   end
