@@ -1,0 +1,20 @@
+                                             Table "public.posts"
+      Column      |              Type              | Collation | Nullable |              Default              
+------------------+--------------------------------+-----------+----------+-----------------------------------
+ id               | bigint                         |           | not null | nextval('posts_id_seq'::regclass)
+ author_id        | bigint                         |           | not null | 
+ title            | character varying              |           |          | 
+ text             | text                           |           |          | 
+ comments_counter | integer                        |           |          | 
+ likes_counter    | integer                        |           |          | 
+ created_at       | timestamp(6) without time zone |           | not null | 
+ updated_at       | timestamp(6) without time zone |           | not null | 
+Indexes:
+    "posts_pkey" PRIMARY KEY, btree (id)
+    "index_posts_on_author_id" btree (author_id)
+Foreign-key constraints:
+    "fk_rails_04d13ef8c7" FOREIGN KEY (author_id) REFERENCES users(id)
+Referenced by:
+    TABLE "comments" CONSTRAINT "fk_rails_2fd19c0db7" FOREIGN KEY (post_id) REFERENCES posts(id)
+    TABLE "likes" CONSTRAINT "fk_rails_87a8aac469" FOREIGN KEY (post_id) REFERENCES posts(id)
+

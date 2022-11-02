@@ -1,15 +1,26 @@
 Rails.application.routes.draw do
+  get 'comments/new'
+  resources :posts 
+  resources :comments
+  get 'posts/new'
+  # temporarly root
+  root 'users#users'
+
   # List all users
-  get 'user/users'
+  get 'users/users'
 
   # Show a single user
-  get '/user/:id', to: 'user#user' 
+  get '/users/:id', to: 'users#user' 
 
   # Show all posts of a single user
-  get 'user/:id/posts', to: 'user#user_posts'
+  get 'users/:id/posts', to: 'users#user_posts'
 
   # Show a single post
-  get 'user/:user_id/posts/:id', to:'user#user_post'
+  get 'users/:user_id/posts/:id', to:'users#user_post'
+
+  #==================  posts routes=======
+  get 'posts/new', to: 'posts#new'
+
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

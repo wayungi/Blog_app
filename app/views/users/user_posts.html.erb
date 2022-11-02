@@ -1,0 +1,64 @@
+<div class="wrapper">
+<h1 class="users_list"><%= "#{@user.name}'s posts" %></h1>
+
+
+<div class="user_group">
+    <div class="user_avatar">
+        <%= image_tag "#{@user.photo}", class:"avatar" %>
+    </div>
+    <div class="user_info">
+        <div class="user_name">
+            <%= @user.name %>
+        </div>
+        <div class="posts_counter">
+            <span class="spacer">Number of posts: </span>
+            <%= @user.posts_counter %>
+        </div>
+    </div>
+</div>
+
+<div class="posts">
+    <% @posts.each do |post|%>
+        <div class="post">
+        <%= link_to "/users/#{@user.id}/posts/#{post.id}" do %>
+            <div class="post">
+                <div class="post_title">
+                    <%= post.title %><br/>
+                </div>
+                <div class="post_body">
+                    <%= post.text %><br />
+                </div>
+                <div class="counters">
+                        <div class="comments_counter">
+                            <span>Commnets: </span>
+                            <%= post.comments_counter%>
+                        </div>
+                        <div class="likes_counter">
+                            <span>Likes counter</span>
+                            <%= post.likes_counter%>
+                        </div>
+                </div>
+            </div>
+        </div>
+    <% end %>
+
+
+    <div class="comments">
+        <% post.comments.order(:created_at).first(5).each do |comment| %>
+            <div class="comment">
+                <%= User.find_by(id: comment.author_id).name %> :
+                <%= comment.text %><br />
+            </div>
+        <% end %>
+    </div>
+    <% end %>
+</div>
+
+    <div class="all_posts">
+        <%= link_to "Paginate", '', class:'view_all_posts' %>
+    </div>
+<div class="wrapper">
+
+
+
+

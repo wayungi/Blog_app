@@ -1,15 +1,184 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,500;0,700;1,100&display=swap');
+
+/*     font-family: 'Montserrat', sans-serif; */
+
+/* normalize */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.wrapper {
+  margin-top: 10px;
+
+  /* outline:1px solid black; */
+}
+
+.users_list {
+  font-size: 34px;
+  text-align: center;
+
+  /* outline:2px solid red; */
+}
+
+/* set flex display */
+.posts_counter,
+.user_name,
+.user_group,
+.user_info,
+.bio,
+.posts,
+.post,
+.counters,
+.all_posts {
+  display: flex;
+}
+
+/* groups .user_avatar & .user_info divs */
+.user_group {
+  justify-content: center;
+  margin-bottom: 1.5%;
+}
+
+/* user-icon div */
+.user_avatar {
+  width: 150px;
+}
+
+.avatar {
+  width: 100%;
+}
+
+/* user information on users page */
+.user_info {
+  justify-content: space-between;
+  width: 60%;
+  background-color: #d9eeae;
+  padding: 5px 10px;
+}
+
+/* user name styles */
+.user_name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  align-items: center;
+}
+
+.posts_counter {
+  align-items: flex-end;
+}
+
+/* add padding between Number of posts & posts count value */
+.spacer {
+  padding-right: 5px;
+}
+
+/* bio div */
+.bio {
+  margin: 15px 0;
+  justify-content: center;
+}
+
+.bio div {
+  width: calc(63.5% + 150px);
+  font-weight: 400;
+  font-size: 15px;
+  color: blue;
+}
+
+/* posts  */
+
+.posts {
+  flex-direction: column;
+  align-items: center;
+}
+
+.post,
+.comments {
+  width: calc(63.5% + 150px);
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.post_title,
+.post_title_name {
+  font-size: 24px;
+  font-weight: 400;
+  color: blueviolet;
+}
+
+.post_body {
+  font-size: 18px;
+  margin-top: 2px;
+}
+
+.counters {
+  justify-content: flex-end;
+}
+
+.counters span {
+  color: blue;
+}
+
+.comments_counter {
+  margin-right: 15px;
+}
+
+.all_posts {
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.view_all_posts {
+  padding: 10px 15px;
+  outline: 1px solid black;
+}
+
+/* ===== a post's  deatils */
+
+.post_detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post_particular {
+  width: 80%;
+}
+
+/* align the heading and post counters on the same line */
+.header_line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post_stats {
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.comments_body {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-top: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  .user_info {
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 10px;
+  }
+
+  .bio div {
+    width: 100%;
+    padding: 1%;
+  }
+}
