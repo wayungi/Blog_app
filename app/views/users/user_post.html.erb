@@ -1,5 +1,4 @@
 <div class="wrapper">
-
     <div class="post_detail">
         <div class="post_particular">
             <div class="header_line">
@@ -9,20 +8,24 @@
                         <%= @user.name%>
                     </div>
                 </div>
-
                 <div class="post_stats">
                     <span>Comments:</span>
                     <%= @post.comments_counter%>
+
                     <span>Likes</span>
                     <%= @post.likes_counter %>
+
                 </div>
             </div>
-
             <div class="post_body">
                 <%= @post.text %>
             </div>
+            <div>
+            like
+            unlike
+            comment
+            </div>
         </div>
-
         <div class="comments_body">
             <h3>Comments</h3>
             <% @post.comments.each do |comment| %>
