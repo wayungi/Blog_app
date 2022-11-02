@@ -3,14 +3,13 @@ Rails.application.routes.draw do
   resources :posts 
   resources :comments
   get 'posts/new'
-  # temporarly root
-  root 'users#users'
 
-  # List all users
-  get 'users/users'
+
+  # temporarly root
+  root 'users#index'
 
   # Show a single user
-  get '/users/:id', to: 'users#user' 
+  get '/users/:id', to: 'users#show' 
 
   # Show all posts of a single user
   get 'users/:id/posts', to: 'users#user_posts'
