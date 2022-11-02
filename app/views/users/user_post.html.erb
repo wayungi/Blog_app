@@ -21,10 +21,18 @@
                 <%= @post.text %>
             </div>
             <div>
-            
-            like
+
+            <% if @user.likes.find_by(post: @post).nil? %>
+            <form action='/likes' method="post">
+              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+              <input type="hidden" name="like[post_id" value="<%= @post.id %>">
+              <input type="submit" value="Like">
+            </form>
+            <% else %>
             unlike
+            <% end %>
             comment
+
 
 
             </div>

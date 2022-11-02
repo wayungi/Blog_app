@@ -4,7 +4,7 @@ class LikesController < ApplicationController
     @user = User.new
     @like = @user.current_user.likes.new(like_params)
 
-    if !like.save
+    if !@like.save
       flash[:notice] = @like.errors.full_messages.to_sentence
       puts "-----------------"
       puts @like.errors.full_messages.to_sentence
