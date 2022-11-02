@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :comments
   get 'posts/new'
   # temporarly root
-  root 'users#users'
+  root 'users#index'
 
   # List all users
   get 'users/users'
