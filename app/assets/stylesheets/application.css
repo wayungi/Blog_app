@@ -170,6 +170,14 @@
   margin-top: 15px;
 }
 
+.comment_field {
+  border-bottom: 2px solid grey;
+}
+
+.comment_field:focus {
+  outline: none;
+}
+
 @media only screen and (max-width: 600px) {
   .user_info {
     flex-direction: column;

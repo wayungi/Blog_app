@@ -6,20 +6,17 @@ class CommentsController < ApplicationController
     @post_id = 1 # This part should be revised
   end
 
-  # todo: refactor this code
+  # TODO: refactor this code
   def create
-    
-    author_id =  params[:author_id]
+    author_id = params[:author_id]
     post_id = params[:post_id]
-    text =  params[:text]
+    text = params[:text]
 
     @comment = Comment.new(
-      author_id: author_id,
-      post_id: post_id,
-      text: text,
+      author_id:,
+      post_id:,
+      text:
     )
-    if @comment.save
-      redirect_to 
-    end
+    redirect_to if @comment.save
   end
 end
