@@ -8,11 +8,18 @@ class CommentsController < ApplicationController
 
   # todo: refactor this code
   def create
+    
+    author_id =  params[:author_id]
+    post_id = params[:post_id]
+    text =  params[:text]
+
     @comment = Comment.new(
-      author_id: params[:comment][:author_id],
-      post_id: params[:comment][:post_id],
-      text: params[:comment][:text]
+      author_id: author_id,
+      post_id: post_id,
+      text: text,
     )
-    @comment.save
+    if @comment.save
+      redirect_to 
+    end
   end
 end
