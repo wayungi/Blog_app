@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'comments/new'
   resources :posts 
   resources :comments
+  resources :likes, only: [:create, :destroy]
   get 'posts/new'
 
 
