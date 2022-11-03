@@ -13,9 +13,15 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comment.author = current_user
     @comment.post = @post
+
+    puts ""
+    puts "---------------"
+    puts @comment
+    puts "---------------"
+    puts ""
    
     if @comment.save   
-      redirect_to(:back)
+      redirect_to comments_path
     else
       render :new
     end
