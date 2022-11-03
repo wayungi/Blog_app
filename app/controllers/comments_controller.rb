@@ -9,7 +9,6 @@ class CommentsController < ApplicationController
   # TODO: refactor this code
   def create
     @comment = Comment.new(comment_params)
-    # @author = Author.find(params[:author_id])
     @post = Post.find(params[:post_id])
     @comment.author = current_user
     @comment.post = @post
