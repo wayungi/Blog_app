@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 
   # show a single post in full with all its comments
   def user_post
-    @user = User.find(params[:id])
+    @user = User.find(params[:user_id])
     @post = @user.posts.find(params[:id])
     @comments = @post.comments
   end

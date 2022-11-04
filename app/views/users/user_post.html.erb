@@ -1,5 +1,4 @@
 <div class="wrapper">
-
     <div class="post_detail">
         <div class="post_particular">
             <div class="header_line">
@@ -9,20 +8,37 @@
                         <%= @user.name%>
                     </div>
                 </div>
-
                 <div class="post_stats">
                     <span>Comments:</span>
                     <%= @post.comments_counter%>
+
                     <span>Likes</span>
                     <%= @post.likes_counter %>
+
                 </div>
             </div>
-
             <div class="post_body">
                 <%= @post.text %>
             </div>
-        </div>
+            <div>
 
+            <% like = @user.likes.find_by(post: @post) %>
+            <form action='/likes' method="post">
+              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"/>
+              <input type="hidden" name="like[post_id]" value="<%= @post.id %>"/>
+              <input type="submit" value="Like"/>
+            </form>
+            
+          <form action ="/comments" method="post">
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"/>
+            <input type="text" name="text" id="comment_text" class="comment_field"/>
+            <input type="hidden" name="author_id", value="<%= @user.id %>" />
+            <input type="hidden" name="post_id", value="<%= @post.id %>" />
+            <input type="submit" value="comment"/>
+          </form>
+            
+            </div>
+        </div>
         <div class="comments_body">
             <h3>Comments</h3>
             <% @post.comments.each do |comment| %>

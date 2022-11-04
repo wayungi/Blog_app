@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   get 'comments/new'
   resources :posts 
-  resources :comments
-  get 'posts/new'
+  resources :comments, only: [:create]
+  resources :likes, only: [:create, :destroy]
+
+  # get 'posts/new'
 
 
   # temporarly root
