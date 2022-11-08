@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   # temporarly root
   root 'users#index'
+  get '/users/index', to: 'users#index'
 
   # Show a single user
   get '/users/:id', to: 'users#show' 
