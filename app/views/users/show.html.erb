@@ -1,1 +1,20 @@
+<div class="wrapper">
     <%= render 'profile', user: @user %>
+
+    <div class="bio">
+        <%= @user.bio %>
+    </div>
+
+    <div class="posts">
+        <% @posts.each do |post| %>
+        <div class="post">
+            <div><%= post.title %></div>
+            <div><%= post.text %></div>
+            <div>
+                <span>Comments: <%= post.comments_counter %></span>,
+                <span>Likes: <%= post.likes_counter %></span>
+            </div>
+        </div>
+        <% end %> 
+    </div>
+</div>
