@@ -1,4 +1,9 @@
 class PostsController < ApplicationController
+  
+  def index
+
+  end
+  
   def new
     @post = Post.new
     # @user = User.new
@@ -6,7 +11,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    
+
   end
 
   def create
