@@ -1,2 +1,3 @@
-
-    <%= render 'profile', users: @users %>
+    <% @users.each do |user| %>
+        <%= render 'profile', user: user %>
+    <% end%>
