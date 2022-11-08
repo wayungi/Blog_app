@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   # display all users
   def index
-    # @users = User.all
+    @users = User.all
   end
 
   # Show user details by id  with 3 most rescent comments

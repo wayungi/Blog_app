@@ -1,1 +1,12 @@
-hello home
+
+<% @users.each do |user| %>
+    <div class="user">
+        <div class="image_frame">
+            <%= image_tag "#{user.photo}", class:"prof_pic" %>
+        </div>
+        <div class="details_pane">
+            <div class="user_name"><%= user.name %></div>
+            <div><span>Number of posts:</span><span><%= user.posts_counter %></span></div>
+        </div>
+    </div>
+<% end %>
