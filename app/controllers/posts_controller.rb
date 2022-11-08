@@ -5,6 +5,10 @@ class PostsController < ApplicationController
     # @current_user = @user.current_user
   end
 
+  def show
+    
+  end
+
   def create
     @post = Post.new(post_params)
     @post.author = current_user
