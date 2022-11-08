@@ -27,6 +27,6 @@ example_id                                      | status  | run_time        |
 ./spec/requests/user_spec.rb[1:4:1]             | failed  | 0.00127 seconds |
 ./spec/requests/user_spec.rb[1:4:2]             | failed  | 0.00133 seconds |
 ./spec/requests/user_spec.rb[1:4:3]             | failed  | 0.00151 seconds |
-./spec/users_controller_spec.rb[1:1]            | passed  | 0.21913 seconds |
+./spec/users_controller_spec.rb[1:1]            | passed  | 0.1396 seconds  |
 ./spec/views/comments/new.html.erb_spec.rb[1:1] | pending | 0.00001 seconds |
 ./spec/views/posts/new.html.erb_spec.rb[1:1]    | pending | 0.00001 seconds |
