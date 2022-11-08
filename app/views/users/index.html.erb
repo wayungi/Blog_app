@@ -1,14 +1,2 @@
 
-<% @users.each do |user| %>
-    <%= link_to user do %>
-        <div class="user">
-            <div class="image_frame">
-                <%= image_tag "#{user.photo}", class:"prof_pic" %>
-            </div>
-            <div class="details_pane">
-                <div class="user_name"><%= user.name %></div>
-                <div><span>Number of posts:</span> <%= user.posts_counter %></div>
-            </div>
-        </div>
-    <% end %>
-<% end %>
+    <%= render 'profile', users: @users %>

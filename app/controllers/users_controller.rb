@@ -6,8 +6,9 @@ class UsersController < ApplicationController
 
   # Show user details by id  with 3 most rescent comments
   def show
-    # @user = User.find(params[:id])
-    # @posts = @user.three_recent_posts
+  params[:id]
+    @user = User.find(params[:id])
+    @posts = @user.three_recent_posts
   end
 
   # show all of the posts of a user in summary with thier comments
