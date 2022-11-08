@@ -37,8 +37,8 @@ RSpec.describe 'test users index page', type: :feature do
 
     # When I click on a user, I am redirected to that user's show page.
     scenario "When I click a user, it redirects me to that user's show page." do
-        Capybara.page.first('div.user_group').click
-        expect(page).to have_no_current_path("/users/#{first_user.id}")
+        Capybara.page.first('div.user').click
+        expect(page).to have_no_current_path(user_path(first_user))
     end
 
 end
