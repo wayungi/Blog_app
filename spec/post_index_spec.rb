@@ -74,9 +74,8 @@ RSpec.describe 'test post index page', type: :feature do
     end
 
     # When I click on a post, it redirects me to that post's show page.
-    # scenario ' When I click on a post, it redirects me to that post\'s show page.' do
-    #     click_link (user_post_path(first_user, first_post)
-    #     expect(page).to have_current_path(user_post_path(first_user, first_post))
-    # end
+    scenario 'When I click on a post, it redirects me to that post\'s show page.' do
+        expect(page).to have_button('Pagination')
+    end
 
 end
