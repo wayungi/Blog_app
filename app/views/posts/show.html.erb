@@ -1,3 +1,15 @@
 here we are, show page
 
-<%= @post %>
+<div>
+    <% @comments.each do |comment| %>
+        <%= comment.post.title %>
+    <% end %>
+</div>
+
+<div>
+    <% @comments.each do |comment|  %>
+        <%= comment.author.name %>
+        <%= comment.text %>
+    <% end %>
+</div>
+
