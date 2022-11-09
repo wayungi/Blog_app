@@ -1,3 +1,24 @@
 index page of posts controller
 
-index page
+<%= render 'users/profile', user: @user %>
+
+<% @posts.each do |post| %>
+    <div>
+        <div>
+            <%= post.title %>
+        </div>
+        <div>
+            <%= post.text %>
+        </div>
+        <div>
+            <span>Comments: <%=post.comments_counter %>,</span>
+            <span>Likes: <%=post.likes_counter %></span>
+        </div>
+
+        <div>
+            <% post.comments.each do |comment| %>
+                <%= render 'comment', comment: comment%>
+            <% end %>
+        </div>
+    </div>
+<% end %>
