@@ -62,6 +62,7 @@ RSpec.describe 'test users index page', type: :feature do
         expect(page).to have_current_path(user_posts_path(first_user))
     end    
 
+
    # When I click a user's post, it redirects me to that post's show page.
     scenario 'When I click a user\'s post, it redirects me to that post\'s show page.' do
         expect(page).to have_current_path(user_post_path(first_user, first_post))
