@@ -3,30 +3,37 @@ class PostsController < ApplicationController
   def index
 
   end
-  
-  def new
-    @post = Post.new
-    # @user = User.new
-    # @current_user = @user.current_user
-  end
 
   def show
+    puts '----------'
+    puts params
+    puts '----------'
+
+    # @post = Post.find(params[:id])
 
   end
+  
+  # def new
+  #   @post = Post.new
+  #   # @user = User.new
+  #   # @current_user = @user.current_user
+  # end
 
-  def create
-    @post = Post.new(post_params)
-    @post.author = current_user
-    if @post.save
-      redirect_to
-    else
-      render :new
-    end
-  end
+  
 
-  private
+  # def create
+  #   @post = Post.new(post_params)
+  #   @post.author = current_user
+  #   if @post.save
+  #     redirect_to
+  #   else
+  #     render :new
+  #   end
+  # end
 
-  def post_params
-    params.require(:post).permit(:title, :text)
-  end
+  # private
+
+  # def post_params
+  #   params.require(:post).permit(:title, :text)
+  # end
 end

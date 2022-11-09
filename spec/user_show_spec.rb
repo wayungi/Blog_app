@@ -55,20 +55,15 @@ RSpec.describe 'test users index page', type: :feature do
         expect(page).to have_content('See all posts')
     end
 
-    # When I click a user's post, it redirects me to that post's show page.
+    # When I click to see all posts, it redirects me to the user's post's index page.
+    scenario 'When I click to see all posts, it redirects me to the user\'s post\'s index page.' do 
+        visit user_post_path(first_user, first_post)
+        click_on 'See all posts'
+        expect(page).to have_current_path(user_posts_path(first_user))
+    end    
 
-
-
-
-
-
-
-
-
-
+   # When I click a user's post, it redirects me to that post's show page.
+    scenario 'When I click a user\'s post, it redirects me to that post\'s show page.' do
+        expect(page).to have_current_path(user_post_path(first_user, first_post))
+    end
 end
-
-=begin
-
-    When I click to see all posts, it redirects me to the user's post's index page.
-=end
