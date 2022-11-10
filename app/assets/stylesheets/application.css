@@ -14,7 +14,6 @@
   box-sizing: border-box;
 }
 
-
 div.wrapper {
   display:grid;
 }
@@ -27,6 +26,7 @@ div.wrapper {
   line-height: 70px;
   padding:0 10%;
   border-radius: 0 0 10px 10px;
+  margin-bottom:20px;
 }
 
 .user-name {
@@ -49,20 +49,42 @@ ul.nav-list li {
   cursor:pointer;
 }
 
-
+.link-container {
+  width:50%;
+  margin:10px auto;
+  box-shadow:0 0 1px 0 #888888;
+}
 
 .user {
   display:flex;
   flex-direction:row;
-  width:50%;
-  margin:10px auto;
-  box-shadow:0 0 1px 1px #888888;
+  width:100%;
+  min-height:200px;
 }
 
 .image_frame {
   padding: 4px 4px 0 4px;
+  width:300px;
 }
 
 .prof_pic {
   border-radius:5px;
+}
+
+/* user detail pane */
+.details_pane {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
+  padding:10px 20px;
+}
+
+div.posts_counter {
+  align-self: flex-end;
+  -webkit-text-stroke-width: .1em;
+}
+
+div.name {
+  font-size: 30px;
 }

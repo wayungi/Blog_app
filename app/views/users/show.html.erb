@@ -1,9 +1,10 @@
 <div class="wrapper">
-
+    <%= render 'navbar' %>
     <%= render 'profile', user: @user %>
 
     <div class="bio">
-        <%= @user.bio %>
+        <h4>Bio</h4>
+        <p><%= @user.bio %></p>
     </div>
 
     <div class="posts">
