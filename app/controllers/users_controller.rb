@@ -11,6 +11,12 @@ class UsersController < ApplicationController
     @posts = @user.three_recent_posts
   end
 
+  def create 
+    puts '-------'
+    puts params
+    puts '-------'
+  end
+
   # show all of the posts of a user in summary with thier comments
   # def user_posts
   #   @user = User.find(params[:id])
