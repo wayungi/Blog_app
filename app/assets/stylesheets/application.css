@@ -49,7 +49,7 @@ ul.nav-list li {
   cursor:pointer;
 }
 
-.link-container {
+.link-container, .bio, .posts {
   width:50%;
   margin:10px auto;
   box-shadow:0 0 1px 0 #888888;
@@ -87,4 +87,14 @@ div.posts_counter {
 
 div.name {
   font-size: 30px;
+}
+
+.bio {
+  padding:5px 10px;
+}
+
+p.posts_title {
+  width:fit-content;
+  margin:10px auto;
+  font-weight: 700;
 }

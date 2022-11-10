@@ -8,9 +8,9 @@
     </div>
 
     <div class="posts">
+        <p class="posts_title">Posts</p>
         <% @posts.each do |post| %>
             <%= link_to user_post_path(@user, post) do %>
-                <%= post.id%>
                 <%= render 'post', post: post %>
             <% end %>
         <% end %> 
