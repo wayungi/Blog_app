@@ -15,25 +15,25 @@
 }
 
 div.wrapper {
-  display:grid;
+  display: grid;
 }
 
-.navbar{
-  display:flex;
+.navbar {
+  display: flex;
   background-color: blue;
-  width:100vw;
-  height:70px;
+  width: 100vw;
+  height: 70px;
   line-height: 70px;
-  padding:0 10%;
+  padding: 0 10%;
   border-radius: 0 0 10px 10px;
-  margin-bottom:20px;
+  margin-bottom: 20px;
 }
 
 .user-name {
-  color:white;
-  font-size:20px;
+  color: white;
+  font-size: 20px;
   font-weight: 700;
-  margin-right:auto;
+  margin-right: auto;
 }
 
 ul.nav-list {
@@ -43,46 +43,48 @@ ul.nav-list {
 ul.nav-list li {
   list-style: none;
   margin: 0 10px;
-  font-size:15px;
+  font-size: 15px;
   font-weight: 300;
-  color:white;
-  cursor:pointer;
+  color: white;
+  cursor: pointer;
 }
 
-.link-container, .bio, .posts {
-  width:50%;
-  margin:10px auto;
-  box-shadow:0 0 1px 0 #888888;
+.link-container,
+.bio,
+.posts {
+  width: 50%;
+  margin: 10px auto;
+  box-shadow: 0 0 1px 0 #888;
 }
 
 .user {
-  display:flex;
-  flex-direction:row;
-  width:100%;
-  min-height:200px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 200px;
 }
 
 .image_frame {
   padding: 4px 4px 0 4px;
-  width:300px;
+  width: 300px;
 }
 
 .prof_pic {
-  border-radius:5px;
+  border-radius: 5px;
 }
 
 /* user detail pane */
 .details_pane {
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  width:100%;
-  padding:10px 20px;
+  width: 100%;
+  padding: 10px 20px;
 }
 
 div.posts_counter {
   align-self: flex-end;
-  -webkit-text-stroke-width: .1em;
+  -webkit-text-stroke-width: 0.1em;
 }
 
 div.name {
@@ -90,60 +92,60 @@ div.name {
 }
 
 .bio {
-  padding:5px 10px;
+  padding: 5px 10px;
 }
 
 p.posts_title {
-  width:fit-content;
-  margin:10px auto;
+  width: fit-content;
+  margin: 10px auto;
   font-weight: 700;
 }
 
 .post {
-  border:1px dotted #888;
-  border-radius: 10px;
+  border: 1px dotted #888;
   padding: 5px;
   border-radius: 1px;
-  margin:15px 4px;
+  margin: 15px 4px;
 }
 
-h2.post_title, .comment_title {
-  font-size:larger;
-  padding:3px 0;
-  margin-right:10px;
+h2.post_title,
+.comment_title {
+  font-size: larger;
+  padding: 3px 0;
+  margin-right: 10px;
 }
 
 p.post_text {
   text-indent: 2em;
   font-style: italic;
-  font-size: 15px ;
-  color:black
+  font-size: 15px;
+  color: black;
 }
 
 .trending {
-  display:flex;
+  display: flex;
   justify-content: flex-end;
 }
 
 .all_posts {
-  outline:1px solid black;
-  width:fit-content;
-  padding:10px 15px;
-  margin:15px auto;
+  outline: 1px solid black;
+  width: fit-content;
+  padding: 10px 15px;
+  margin: 15px auto;
 }
 
 .comments {
-  margin:10px;
+  margin: 10px;
 }
 
 .comment {
-  display:flex;
+  display: flex;
   align-items: baseline;
 }
 
 div.post_show {
-  outline:1px solid black;
-  width:50%;
+  outline: 1px solid black;
+  width: 50%;
   margin: 0 auto;
 }
 
