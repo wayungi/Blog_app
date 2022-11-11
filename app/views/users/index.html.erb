@@ -1,5 +1,6 @@
-    <div class="wrapper">
-        <% @users.each do |user| %>
-            <%= render 'profile', user: user %>
-        <% end%>
-    </div>
+<div class="wrapper">
+    <%= render 'navbar' %>
+    <% @users.each do |user| %>
+        <%= render 'profile', user: user %> 
+    <% end%>
+</div>

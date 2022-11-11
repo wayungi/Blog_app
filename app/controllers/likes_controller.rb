@@ -1,5 +1,4 @@
 class LikesController < ApplicationController
-  # handle creating new like
   def create
     @user = User.new
     @like = @user.current_user.likes.new(like_params)
@@ -11,11 +10,9 @@ class LikesController < ApplicationController
     end
   end
 
-  # handles unliking
   def destroy
     @user = User.new
     @like = @user.current_user.likes.find(params[:id])
-    # keep reference to the post
     post = @like.post
     @like.destroy
     redirect_to post

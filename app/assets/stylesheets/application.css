@@ -11,182 +11,144 @@
   color: black;
   text-decoration: none;
   font-size: 12px;
+  box-sizing: border-box;
 }
 
-.wrapper {
-  margin-top: 10px;
-
-  /* outline:1px solid black; */
+div.wrapper {
+  display: grid;
 }
 
-.users_list {
-  font-size: 34px;
-  text-align: center;
-
-  /* outline:2px solid red; */
+.navbar {
+  display: flex;
+  background-color: blue;
+  width: 100vw;
+  height: 70px;
+  line-height: 70px;
+  padding: 0 10%;
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 20px;
 }
 
-/* set flex display */
-.posts_counter,
-.user_name,
-.user_group,
-.user_info,
-.bio,
-.posts,
-.post,
-.counters,
-.all_posts {
+.user-name {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: auto;
+}
+
+ul.nav-list {
   display: flex;
 }
 
-/* groups .user_avatar & .user_info divs */
-.user_group {
-  justify-content: center;
-  margin-bottom: 1.5%;
+ul.nav-list li {
+  list-style: none;
+  margin: 0 10px;
+  font-size: 15px;
+  font-weight: 300;
+  color: white;
+  cursor: pointer;
 }
 
-/* user-icon div */
-.user_avatar {
-  width: 150px;
+.link-container,
+.bio,
+.posts {
+  width: 50%;
+  margin: 10px auto;
+  box-shadow: 0 0 1px 0 #888;
 }
 
-.avatar {
+.user {
+  display: flex;
+  flex-direction: row;
   width: 100%;
+  min-height: 200px;
 }
 
-/* user information on users page */
-.user_info {
+.image_frame {
+  padding: 4px 4px 0 4px;
+  width: 300px;
+}
+
+.prof_pic {
+  border-radius: 5px;
+}
+
+/* user detail pane */
+.details_pane {
+  display: flex;
   justify-content: space-between;
-  width: 60%;
-  background-color: #d9eeae;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+div.posts_counter {
+  align-self: flex-end;
+  -webkit-text-stroke-width: 0.1em;
+}
+
+div.name {
+  font-size: 30px;
+}
+
+.bio {
   padding: 5px 10px;
 }
 
-/* user name styles */
-.user_name {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 25px;
+p.posts_title {
+  width: fit-content;
+  margin: 10px auto;
   font-weight: 700;
-  align-items: center;
 }
 
-.posts_counter {
-  align-items: flex-end;
+.post {
+  border: 1px dotted #888;
+  padding: 5px;
+  border-radius: 1px;
+  margin: 15px 4px;
 }
 
-/* add padding between Number of posts & posts count value */
-.spacer {
-  padding-right: 5px;
+h2.post_title,
+.comment_title {
+  font-size: larger;
+  padding: 3px 0;
+  margin-right: 10px;
 }
 
-/* bio div */
-.bio {
-  margin: 15px 0;
-  justify-content: center;
-}
-
-.bio div {
-  width: calc(63.5% + 150px);
-  font-weight: 400;
+p.post_text {
+  text-indent: 2em;
+  font-style: italic;
   font-size: 15px;
-  color: blue;
+  color: black;
 }
 
-/* posts  */
-
-.posts {
-  flex-direction: column;
-  align-items: center;
-}
-
-.post,
-.comments {
-  width: calc(63.5% + 150px);
-  flex-direction: column;
-  margin-bottom: 15px;
-}
-
-.post_title,
-.post_title_name {
-  font-size: 24px;
-  font-weight: 400;
-  color: blueviolet;
-}
-
-.post_body {
-  font-size: 18px;
-  margin-top: 2px;
-}
-
-.counters {
+.trending {
+  display: flex;
   justify-content: flex-end;
 }
 
-.counters span {
-  color: blue;
-}
-
-.comments_counter {
-  margin-right: 15px;
-}
-
 .all_posts {
-  margin-top: 20px;
-  justify-content: center;
-}
-
-.view_all_posts {
-  padding: 10px 15px;
   outline: 1px solid black;
+  width: fit-content;
+  padding: 10px 15px;
+  margin: 15px auto;
 }
 
-/* ===== a post's  deatils */
+.comments {
+  margin: 10px;
+}
 
-.post_detail {
+.comment {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: baseline;
 }
 
-.post_particular {
-  width: 80%;
+div.post_show {
+  outline: 1px solid black;
+  width: 50%;
+  margin: 0 auto;
 }
 
-/* align the heading and post counters on the same line */
-.header_line {
-  display: flex;
-  justify-content: space-between;
-}
-
-.post_stats {
-  font-size: 20px;
-  font-weight: 200;
-}
-
-.comments_body {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  margin-top: 15px;
-}
-
-.comment_field {
-  border-bottom: 2px solid grey;
-}
-
-.comment_field:focus {
-  outline: none;
-}
-
-@media only screen and (max-width: 600px) {
-  .user_info {
-    flex-direction: column;
-    justify-content: flex-start;
-    row-gap: 10px;
-  }
-
-  .bio div {
-    width: 100%;
-    padding: 1%;
-  }
+.blue {
+  color: blue;
 }
