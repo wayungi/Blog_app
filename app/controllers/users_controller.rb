@@ -9,7 +9,5 @@ class UsersController < ApplicationController
     @posts = @user.three_recent_posts
   end
 
-  def create
-  end
-
+  def create; end
 end
