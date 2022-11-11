@@ -1,0 +1,28 @@
+index page of posts controller
+<div class="wrapper">
+    <%= render 'users/profile', user: @user %>
+
+    <% @posts.each do |post| %>
+        <div>
+            <%= link_to  user_post_path(@user, post) do %>
+                <div>
+                    <div><%= post.title %></div>
+                    <div><%= post.text %></div>
+                    <div>
+                        <span>Comments: <%=post.comments_counter %>,</span>
+                        <span>Likes: <%=post.likes_counter %></span>
+                    </div>
+                </div>
+                <div>
+                    <% post.comments.each do |comment| %>
+                        <%= render 'comment', comment: comment%>
+                    <% end %>
+                </div>
+            <% end %>
+        </div>
+    <% end %>
+
+    <div>
+        <%= button_to "Pagination" %>
+    </div>
+</div>

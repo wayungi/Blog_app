@@ -1,0 +1,22 @@
+here we are, show page
+
+<div>
+    <div >
+        <%= @comments.first.post.title %> by 
+        <%= @comments.first.post.author.name %>
+        <%= @comments.first.post.text%>
+    </div>
+
+    <div class="">
+    <span>Comments: <%= @comments.first.post.comments_counter %></span>,
+    <span>Likes: <%= @comments.first.post.likes_counter %></span>,
+    </div>
+    
+</div>
+
+<div class="comments">
+    <% @comments.each do |comment|  %>
+        <%= render 'comment', comment: comment %>
+    <% end %>
+</div>
+
