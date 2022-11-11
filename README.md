@@ -29,6 +29,11 @@ A blog app created with RoR.
 - Twitter: [@twitterhandle](https://twitter.com/FrancisWayungi)
 - LinkedIn: [LinkedIn](www.linkedin.com/in/francis-wayungi)
 
+👤 **Achike Chuma Edward**
+
+- GitHub: [@chumaachike](https://github.com/chumaachike)
+- Twitter: [@AchikeChuma](https://twitter.com/AchikeChuma)
+- LinkedIn: [Edward Achike](https://www.linkedin.com/in/edwardachike/)
 
 ## 🤝 Contributing
 
